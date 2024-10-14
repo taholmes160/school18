@@ -37,6 +37,7 @@ class User(UserMixin, db.Model):
     first_name = db.Column(db.String(64), nullable=True)
     last_name = db.Column(db.String(64), nullable=True)
     profile_picture = db.Column(db.String(256), nullable=True)
+    student_profile = db.relationship('StudentProfile', backref='user', uselist=False)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -47,6 +48,7 @@ class User(UserMixin, db.Model):
 class StudentProfile(db.Model):
     __tablename__ = 'student_profiles'
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     date_of_birth = db.Column(db.Date, nullable=True)
     emergency_contact_name = db.Column(db.String(128), nullable=True)
     emergency_contact_phone = db.Column(db.String(20), nullable=True)
@@ -58,3 +60,5 @@ class StudentProfile(db.Model):
     previous_school = db.Column(db.String(128), nullable=True)
     extra_curricular_activities = db.Column(db.Text, nullable=True)
     special_needs = db.Column(db.Text, nullable=True)
+    grade = db.Column(db.String(64), nullable=True)  # Added grade field
+    age = db.Column(db.Integer, nullable=True)  # Added age field

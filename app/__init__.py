@@ -22,8 +22,8 @@ def create_app(config_class=Config):
     from app.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
 
-    from app.students import students_bp
-    app.register_blueprint(students_bp, url_prefix='/students')
+    from app.students import students_bp  # Import the students blueprint
+    app.register_blueprint(students_bp, url_prefix='/students')  # Register the students blueprint
 
     from app.routes import main_bp  # Import the main blueprint
     app.register_blueprint(main_bp)  # Register the main blueprint without a prefix
