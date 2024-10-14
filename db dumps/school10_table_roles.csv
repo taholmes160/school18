@@ -1,21 +1,21 @@
-"id","name","description","permissions"
-"1","Principal",,NULL
-"3","Vice Principal",,NULL
-"4","Counselor",,NULL
-"5","Librarian",,NULL
-"6","IT Support",,NULL
-"7","Finance Officer",,NULL
-"8","Attendance Officer",,NULL
-"9","Office Staff",,NULL
-"10","Food Service",,NULL
-"11","Health Staff",,NULL
-"12","Department Head",,NULL
-"13","Coach",,NULL
-"14","Substitute Teacher",,NULL
-"15","Volunteer",,NULL
-"16","Board Member",,NULL
-"17","Alumni",,NULL
-"18","Teacher",,NULL
-"19","Student",,NULL
-"20","Parent",,NULL
-"21","Facilities",,NULL 
+"id","name"
+"17","Alumni"
+"8","Attendance Officer"
+"16","Board Member"
+"13","Coach"
+"4","Counselor"
+"12","Department Head"
+"21","Facilities"
+"7","Finance Officer"
+"10","Food Service"
+"11","Health Staff"
+"6","IT Support"
+"5","Librarian"
+"9","Office Staff"
+"20","Parent"
+"1","Principal"
+"19","Student"
+"14","Substitute Teacher"
+"18","Teacher"
+"3","Vice Principal"
+"15","Volunteer"
