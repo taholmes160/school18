@@ -19,7 +19,10 @@ def create_app(config_class=Config):
     from app.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
 
-    from app.models import User  # Ensure User model is imported
+    from app.students import students_bp  # Import the students blueprint
+    app.register_blueprint(students_bp, url_prefix='/students')  # Register the students blueprint
+
+    from app.models import User
 
     @login_manager.user_loader
     def load_user(user_id):
